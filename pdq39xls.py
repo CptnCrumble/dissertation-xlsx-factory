@@ -75,7 +75,7 @@ def pdq39xls(pid):
     for record in data:        
         ws[f'A{active_row}'].value = record['Pid']
         ws[f'B{active_row}'].value = record['AssessmentNumber']
-        ws[f'C{active_row}'].value = record['AssessmentDate']
+        ws[f'C{active_row}'].value = record['AssessmentDate'][0:10]
         ws[f'D{active_row}'].value = record['Pdq1']
         ws[f'E{active_row}'].value = record['Pdq2']
         ws[f'F{active_row}'].value = record['Pdq3']
