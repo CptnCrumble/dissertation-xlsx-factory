@@ -1,0 +1,3 @@
+export HOST_IP="127.0.0.1"
+export PG_ADAPTOR_PORT="9057"
+export CUDUI_PORT="9090"
