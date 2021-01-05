@@ -3,6 +3,12 @@ import os
 import urllib.request as req
 from openpyxl import Workbook
 
+def varchar_to_int(value):
+    try:
+        return int(value)
+    except:
+        return None
+
 def pdq39xls(pid):
     ip = os.getenv('HOST_IP')
     port = os.getenv('PG_ADAPTOR_PORT')
@@ -76,45 +82,45 @@ def pdq39xls(pid):
         ws[f'A{active_row}'].value = record['Pid']
         ws[f'B{active_row}'].value = record['AssessmentNumber']
         ws[f'C{active_row}'].value = record['AssessmentDate'][0:10]
-        ws[f'D{active_row}'].value = record['Pdq1']
-        ws[f'E{active_row}'].value = record['Pdq2']
-        ws[f'F{active_row}'].value = record['Pdq3']
-        ws[f'G{active_row}'].value = record['Pdq4']
-        ws[f'H{active_row}'].value = record['Pdq5']
-        ws[f'I{active_row}'].value = record['Pdq6']
-        ws[f'J{active_row}'].value = record['Pdq7']
-        ws[f'K{active_row}'].value = record['Pdq8']
-        ws[f'L{active_row}'].value = record['Pdq9']
-        ws[f'M{active_row}'].value = record['Pdq10']
-        ws[f'N{active_row}'].value = record['Pdq11']
-        ws[f'O{active_row}'].value = record['Pdq12']
-        ws[f'P{active_row}'].value = record['Pdq13']
-        ws[f'Q{active_row}'].value = record['Pdq14']
-        ws[f'R{active_row}'].value = record['Pdq15']
-        ws[f'S{active_row}'].value = record['Pdq16']
-        ws[f'T{active_row}'].value = record['Pdq17']
-        ws[f'U{active_row}'].value = record['Pdq18']
-        ws[f'V{active_row}'].value = record['Pdq19']
-        ws[f'W{active_row}'].value = record['Pdq20']
-        ws[f'X{active_row}'].value = record['Pdq21']
-        ws[f'Y{active_row}'].value = record['Pdq22']
-        ws[f'Z{active_row}'].value = record['Pdq23']
-        ws[f'AA{active_row}'].value = record['Pdq24']
-        ws[f'AB{active_row}'].value = record['Pdq25']
-        ws[f'AC{active_row}'].value = record['Pdq26']
-        ws[f'AD{active_row}'].value = record['Pdq27']
-        ws[f'AE{active_row}'].value = record['Pdq28']
-        ws[f'AF{active_row}'].value = record['Pdq29']
-        ws[f'AG{active_row}'].value = record['Pdq30']
-        ws[f'AH{active_row}'].value = record['Pdq31']
-        ws[f'AI{active_row}'].value = record['Pdq32']
-        ws[f'AJ{active_row}'].value = record['Pdq33']
-        ws[f'AK{active_row}'].value = record['Pdq34']
-        ws[f'AL{active_row}'].value = record['Pdq35']
-        ws[f'AM{active_row}'].value = record['Pdq36']
-        ws[f'AN{active_row}'].value = record['Pdq37']
-        ws[f'AO{active_row}'].value = record['Pdq38']
-        ws[f'AP{active_row}'].value = record['Pdq39']
+        ws[f'D{active_row}'].value = varchar_to_int(record['Pdq1'])
+        ws[f'E{active_row}'].value = varchar_to_int(record['Pdq2'])
+        ws[f'F{active_row}'].value = varchar_to_int(record['Pdq3'])
+        ws[f'G{active_row}'].value = varchar_to_int(record['Pdq4'])
+        ws[f'H{active_row}'].value = varchar_to_int(record['Pdq5'])
+        ws[f'I{active_row}'].value = varchar_to_int(record['Pdq6'])
+        ws[f'J{active_row}'].value = varchar_to_int(record['Pdq7'])
+        ws[f'K{active_row}'].value = varchar_to_int(record['Pdq8'])
+        ws[f'L{active_row}'].value = varchar_to_int(record['Pdq9'])
+        ws[f'M{active_row}'].value = varchar_to_int(record['Pdq10'])
+        ws[f'N{active_row}'].value = varchar_to_int(record['Pdq11'])
+        ws[f'O{active_row}'].value = varchar_to_int(record['Pdq12'])
+        ws[f'P{active_row}'].value = varchar_to_int(record['Pdq13'])
+        ws[f'Q{active_row}'].value = varchar_to_int(record['Pdq14'])
+        ws[f'R{active_row}'].value = varchar_to_int(record['Pdq15'])
+        ws[f'S{active_row}'].value = varchar_to_int(record['Pdq16'])
+        ws[f'T{active_row}'].value = varchar_to_int(record['Pdq17'])
+        ws[f'U{active_row}'].value = varchar_to_int(record['Pdq18'])
+        ws[f'V{active_row}'].value = varchar_to_int(record['Pdq19'])
+        ws[f'W{active_row}'].value = varchar_to_int(record['Pdq20'])
+        ws[f'X{active_row}'].value = varchar_to_int(record['Pdq21'])
+        ws[f'Y{active_row}'].value = varchar_to_int(record['Pdq22'])
+        ws[f'Z{active_row}'].value = varchar_to_int(record['Pdq23'])
+        ws[f'AA{active_row}'].value = varchar_to_int(record['Pdq24'])
+        ws[f'AB{active_row}'].value = varchar_to_int(record['Pdq25'])
+        ws[f'AC{active_row}'].value = varchar_to_int(record['Pdq26'])
+        ws[f'AD{active_row}'].value = varchar_to_int(record['Pdq27'])
+        ws[f'AE{active_row}'].value = varchar_to_int(record['Pdq28'])
+        ws[f'AF{active_row}'].value = varchar_to_int(record['Pdq29'])
+        ws[f'AG{active_row}'].value = varchar_to_int(record['Pdq30'])
+        ws[f'AH{active_row}'].value = varchar_to_int(record['Pdq31'])
+        ws[f'AI{active_row}'].value = varchar_to_int(record['Pdq32'])
+        ws[f'AJ{active_row}'].value = varchar_to_int(record['Pdq33'])
+        ws[f'AK{active_row}'].value = varchar_to_int(record['Pdq34'])
+        ws[f'AL{active_row}'].value = varchar_to_int(record['Pdq35'])
+        ws[f'AM{active_row}'].value = varchar_to_int(record['Pdq36'])
+        ws[f'AN{active_row}'].value = varchar_to_int(record['Pdq37'])
+        ws[f'AO{active_row}'].value = varchar_to_int(record['Pdq38'])
+        ws[f'AP{active_row}'].value = varchar_to_int(record['Pdq39'])
         ws[f'AS{active_row}'] = f'=(AT{active_row}+AU{active_row}+AV{active_row}+AW{active_row}+AX{active_row}+AY{active_row}+AZ{active_row}+BA{active_row})/8'
         ws[f'AT{active_row}'] = f'=(D{active_row}+E{active_row}+F{active_row}+G{active_row}+H{active_row}+I{active_row}+J{active_row}+K{active_row}+L{active_row}+M{active_row})/0.4'
         ws[f'AU{active_row}'] = f'=(N{active_row}+O{active_row}+P{active_row}+Q{active_row}+R{active_row}+S{active_row})/0.24'

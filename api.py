@@ -15,6 +15,7 @@ def download():
 
     query_parameters = flask.request.args
     pid = query_parameters.get('pid')
+    
     wb = pdq39xls(pid)
     return flask.Response(
         save_virtual_workbook(wb),
